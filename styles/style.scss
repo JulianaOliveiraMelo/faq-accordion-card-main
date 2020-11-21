@@ -217,22 +217,8 @@ body {
 		display: block;
 
 		&:hover {
-			h3 {
+			.title {
 				color: $textHover;
-			}
-		}
-
-		h3 {
-			min-width: 10px;
-			margin: auto 10px auto 0;
-			color: $questionColor;
-			padding: 15px 0;
-			font-weight: 400;
-			font-size: 15px;
-
-			@media (max-width: 1055px) {
-				margin: auto auto;
-				font-size: 14px;
 			}
 		}
 
@@ -240,19 +226,34 @@ body {
 			grid-area: image;
 		}
 
-		span {
+		.content {
 			grid-area: answer;
 			overflow: hidden;
 		}
 	}
 }
 
+label {
+	//height: 100px;
+	//text-align: left;
+	min-width: 10px;
+	margin: 5px auto auto 0;
+	color: $questionColor;
+	padding: 15px 0;
+	font-weight: 400;
+	font-size: 15px;
+
+	@media (max-width: 1055px) {
+		margin: auto auto auto 0;
+		font-size: 14px;
+	}
+}
 input[type='radio'].questions {
 	display: none;
 }
 
 input[type='radio'].questions:checked {
-	~ span.content {
+	~ .content {
 		height: 100%;
 		animation-delay: 1s;
 		animation: spandisplay 0.5s ease both;
@@ -264,7 +265,7 @@ input[type='radio'].questions:checked {
 			margin: 10px 25px 10px 0;
 		}
 	}
-	~ label > h3 {
+	~ label > span.title {
 		color: $questionColor;
 		font-weight: 700;
 	}
@@ -273,7 +274,7 @@ input[type='radio'].questions:checked {
 	}
 }
 
-span.content {
+.content {
 	transform: translateY(-100px);
 	opacity: 0;
 	height: 0;
