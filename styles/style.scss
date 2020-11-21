@@ -199,9 +199,9 @@ body {
 	border-bottom: 0.5px solid $borderBottom;
 	display: grid;
 	grid-template-areas:
-		'question image'
+		'question question'
 		'answer answer';
-	grid-template-columns: auto 1%;
+	grid-template-columns: auto;
 	align-items: center;
 	background-color: white;
 	margin-right: 10px;
@@ -211,6 +211,8 @@ body {
 	}
 
 	label.question {
+		position: relative;
+		width: 100%;
 		z-index: 1;
 		cursor: pointer;
 		grid-area: question;
@@ -222,17 +224,19 @@ body {
 			}
 		}
 
-		img {
-			grid-area: image;
-		}
-
 		.content {
 			grid-area: answer;
 			overflow: hidden;
 		}
 	}
 }
-
+label:after {
+	content: url('../images/icon-arrow-down.svg');
+	display: inline;
+	position: absolute;
+	text-align: right;
+	right: 0;
+}
 label {
 	//height: 100px;
 	//text-align: left;
@@ -269,7 +273,8 @@ input[type='radio'].questions:checked {
 		color: $questionColor;
 		font-weight: 700;
 	}
-	~ img {
+	//TODO rotate the image after the label
+	~ label:after {
 		transform: rotate(180deg);
 	}
 }

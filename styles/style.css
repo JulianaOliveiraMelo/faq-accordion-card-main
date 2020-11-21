@@ -251,9 +251,9 @@ body {
   border-bottom: 0.5px solid #e7e7e9;
   display: -ms-grid;
   display: grid;
-      grid-template-areas: 'question image' 'answer answer';
-  -ms-grid-columns: auto 1%;
-      grid-template-columns: auto 1%;
+      grid-template-areas: 'question question' 'answer answer';
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -268,10 +268,13 @@ body {
 }
 
 .question-group label.question {
+  position: relative;
+  width: 100%;
   z-index: 1;
   cursor: pointer;
   -ms-grid-row: 1;
   -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
   grid-area: question;
   display: block;
 }
@@ -280,18 +283,20 @@ body {
   color: #f47c57;
 }
 
-.question-group label.question img {
-  -ms-grid-row: 1;
-  -ms-grid-column: 2;
-  grid-area: image;
-}
-
 .question-group label.question .content {
   -ms-grid-row: 2;
   -ms-grid-column: 1;
   -ms-grid-column-span: 2;
   grid-area: answer;
   overflow: hidden;
+}
+
+label:after {
+  content: url("../images/icon-arrow-down.svg");
+  display: inline;
+  position: absolute;
+  text-align: right;
+  right: 0;
 }
 
 label {
@@ -341,7 +346,7 @@ input[type='radio'].questions:checked ~ label > span.title {
   font-weight: 700;
 }
 
-input[type='radio'].questions:checked ~ img {
+input[type='radio'].questions:checked ~ label:after {
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
