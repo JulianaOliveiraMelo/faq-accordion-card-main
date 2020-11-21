@@ -2,8 +2,16 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name=“viewport” content=“width=device-width,user-scalable=no,initial-scale=1.0,maximum-scale=1.0, minimum-scale=1.0” />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			name="“viewport”"
+			content="“width"
+			="device-width,user-scalable"
+			="no,initial-scale"
+			="1.0,maximum-scale"
+			="1.0,"
+			minimum-scale="1.0”"
+		/>
 		<!-- displays site properly based on user's device -->
 
 		<link
@@ -12,9 +20,12 @@
 			sizes="32x32"
 			href="./images/favicon-32x32.png"
 		/>
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="./styles/style.css" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
 		<title>Frontend Mentor | FAQ Accordion Card</title>
 
 		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -26,77 +37,130 @@
 			.attribution a {
 				color: hsl(228, 45%, 44%);
 			} -->
-		</style>
+		<!--</style>-->
 	</head>
 	<body>
-    <div class="container">
-      
-      <div class="leftSide">
-        <div class="outSider">
-          <img class="box" src="./images/illustration-box-desktop.svg" alt="">
-        </div>
-        <div class="insider">
-          <img class="topImage" src="./images/illustration-woman-online-desktop.svg" alt="">
-          <img class="backgroundImage" src="./images/bg-pattern-desktop.svg" alt="">
-        </div>
-      </div>
-      <div class="mobile">
-        <div>
-          <img src="./images/bg-pattern-mobile.svg" alt="" class="mobile__background">
-        </div>
-      </div>
-      <div class="rightSide">
-        <div class="accordion">
-          
-          <h1>Faq</h1>
-          <img src="./images/illustration-woman-online-mobile.svg" alt="" class="topBlockImage">
-  
-  <div class="accordion-container">
-    
-    <div class="question-group">
-      <input type="radio" id="questionOne" name="selected" class="questions">
-      <label for="questionOne" class="question"><span class="title">How many team members can I invite?</span></label>
-      <span class="content">You can invite up to 2 additional users on the Free plan. There is no limit on team members for the Premium plan.</span>
-    </div>
-    
-    
-    <div class="question-group">
-      <input type="radio" id="questionTwo" name="selected" class="questions">
-      <label for="questionTwo" class="question">
-        <span class="title">What is the maximum file upload size?</span>
-      </label>
-      <span class="content">No more than 2GB. All files in your account must fit your allotted storage space.</span>
-    </div>
+		<div class="container">
+			<div class="leftSide">
+				<div class="outSider">
+					<img class="box" src="./images/illustration-box-desktop.svg" alt="" />
+				</div>
+				<div class="insider">
+					<img
+						class="topImage"
+						src="./images/illustration-woman-online-desktop.svg"
+						alt=""
+					/>
+					<img
+						class="backgroundImage"
+						src="./images/bg-pattern-desktop.svg"
+						alt=""
+					/>
+				</div>
+			</div>
+			<div class="mobile">
+				<div>
+					<img
+						src="./images/bg-pattern-mobile.svg"
+						alt=""
+						class="mobile__background"
+					/>
+				</div>
+			</div>
+			<div class="rightSide">
+				<div class="accordion">
+					<h1>Faq</h1>
+					<img
+						src="./images/illustration-woman-online-mobile.svg"
+						alt=""
+						class="topBlockImage"
+					/>
 
-    <div class="question-group">
-      <input type="radio" id="questionThree" name="selected" class="questions">
-      <label for="questionThree" class="question"><span class="title">How do I reset my password?</span></label>
-      <span class="content">Click “Forgot password” from the login page or “Change password” from your profile page. A reset link will be emailed to you.</span>
-    </div>
+					<div class="accordion-container">
+						<div class="question-group">
+							<input
+								type="radio"
+								id="questionOne"
+								name="selected"
+								class="questions"
+							/>
+							<label for="questionOne" class="question">
+								<span class="title">How many team members can I invite?</span>
+							</label>
+							<span class="content">
+								You can invite up to 2 additional users on the Free plan. There
+								is no limit on team members for the Premium plan.
+							</span>
+						</div>
 
-    <div class="question-group">
-      <input type="radio" id="questionFour" name="selected" class="questions">
-      <label for="questionFour" class="question"><span class="title">Can I cancel my subscription?</span></label>
-    <span class="content">Yes! Send us a message and we’ll process your request no questions asked.</span>
-  </div>
-  
-  <div class="question-group">
-    <input type="radio" id="questionFive" name="selected" class="questions">
-    <label for="questionFive" class="question"><span class="title">Do you provide additional support?</span></label>
-    <span class="content">Chat and email support is available 24/7. Phone lines are open during normal business hours.</span>
-  </div>
-  
+						<div class="question-group">
+							<input
+								type="radio"
+								id="questionTwo"
+								name="selected"
+								class="questions"
+							/>
+							<label for="questionTwo" class="question">
+								<span class="title">What is the maximum file upload size?</span>
+							</label>
+							<span class="content">
+								No more than 2GB. All files in your account must fit your
+								allotted storage space.
+							</span>
+						</div>
 
-  
-</div>
+						<div class="question-group">
+							<input
+								type="radio"
+								id="questionThree"
+								name="selected"
+								class="questions"
+							/>
+							<label for="questionThree" class="question">
+								<span class="title">How do I reset my password?</span>
+							</label>
+							<span class="content">
+								Click “Forgot password” from the login page or “Change password”
+								from your profile page. A reset link will be emailed to you.
+							</span>
+						</div>
 
-</div>
+						<div class="question-group">
+							<input
+								type="radio"
+								id="questionFour"
+								name="selected"
+								class="questions"
+							/>
+							<label for="questionFour" class="question">
+								<span class="title">Can I cancel my subscription?</span>
+							</label>
+							<span class="content">
+								Yes! Send us a message and we’ll process your request no
+								questions asked.
+							</span>
+						</div>
 
-
-
-</div>
-</div>
-<!-- <div class="attribution">
+						<div class="question-group">
+							<input
+								type="radio"
+								id="questionFive"
+								name="selected"
+								class="questions"
+							/>
+							<label for="questionFive" class="question">
+								<span class="title">Do you provide additional support?</span>
+							</label>
+							<span class="content">
+								Chat and email support is available 24/7. Phone lines are open
+								during normal business hours.
+							</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="attribution">
   Challenge by
   <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
   >Frontend Mentor</a
