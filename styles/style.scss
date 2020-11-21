@@ -139,20 +139,29 @@ body {
 	@media (max-width: 1055px) {
 		display: inline;
 		position: absolute;
-		width: 77%;
+		width: 78%;
 		margin-top: 14.5%;
 		top: 14px;
 		right: 15%;
 	}
 
 	@media (min-width: 600px) and (max-width: 1055px) {
-		top: 50%;
+		//top: 50%;
 		left: 50%;
 		width: 240px;
 		height: 172px;
-		margin-top: -188px;
+		margin-top: 135px;
 		margin-left: -146px;
 		transform: scale(1.85);
+	}
+	// Ipad @media queries Layout
+	@media only screen and (min-device-width: 670px) and (max-device-width: 1024px) and (orientation: portrait) {
+		top: 7%;
+		margin-top: 54px;
+		transform: scale(1.75);
+	}
+	@media (max-width: 320px) {
+		margin-top: 11.5%;
 	}
 }
 
@@ -273,7 +282,7 @@ input[type='radio'].questions:checked {
 		color: $questionColor;
 		font-weight: 700;
 	}
-	//TODO rotate the image after the label
+
 	~ label:after {
 		transform: rotate(180deg);
 	}
